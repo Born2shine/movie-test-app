@@ -1,0 +1,232 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// GENERAL STYLING
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+.main-wrapper{
+    header{
+        background: $clr-dark-1;
+        padding: 20px;
+        border-bottom: 0;
+        .logo{
+            text-align: center;
+            color: $clr-white;
+            font-size: 18px;
+            margin: 5px 0;
+            .special-text{
+                border: 1px solid $clr-white;
+                padding: 4px 7px;
+            }
+        }
+    }
+    .hero{
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url("../images/cinema-bg.jpeg") center/cover no-repeat;
+        border-top: 0;
+        height: 257px;
+        position: relative;
+        .content{
+            position: absolute;
+            color: $clr-white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 28px;
+            width: 273px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -5;
+            line-height: 1.3;
+        }
+    }
+    .main-content{
+        margin: 56px 27px;
+        .search-wrapper{
+            display: flex;
+            flex-direction: column;
+            label{
+                color: $clr-dark;
+                margin-bottom: 4px;
+            }
+            .search-input{
+                height: 34px;
+                padding: 0 10px;
+                border: none;
+                border-radius: 0;
+                outline: 1px solid $clr-dark;
+            }
+        }
+        .movies-wrapper{
+            margin-top: 33px;
+            .single-category{
+                // margin-bottom: 82px;
+                .title{
+                    margin-bottom: 26px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $clr-dark;
+                }
+                .movies{
+                    display: flex;
+                    gap: 13px;
+                    overflow: scroll;
+                    .single-movie{
+                        position: relative;
+                        .movie-img{
+                            width: 200px;
+                            height: 200px;
+                            object-fit: cover;
+                            border-radius: $radius;
+                            margin-bottom: 33px;
+                            cursor: pointer;
+                        }
+                        .title{
+                            color: $clr-white;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-md){
+    .main-wrapper{
+        header{
+            .logo{
+                padding: 20px 0;
+                .special-text{
+                    padding: 10px 20px;
+                    font-size: 28px;
+                }
+            }
+        }
+        .hero{
+            border-top: 0;
+            height: 550px;
+            .content{
+                font-size: 4rem;
+                width: 273px;
+            }
+        }
+        
+        .main-content{
+            margin: 56px 77px;
+            .search-wrapper{
+                label{
+                    font-size: 24px;
+                }
+                .search-input{
+                    height: 54px;
+                    font-size: 20px;
+                }
+            }
+            .movies-wrapper{
+                margin-top: 48px;
+                .single-category{
+                    .title{
+                        margin-bottom: 26px;
+                        font-size: 24px;
+                    }
+                    .movies{
+                        .single-movie{
+                            .movie-img{
+                                width: 300px;
+                                height: 300px;
+                            }
+                            .title{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+    .main-wrapper{
+        header{
+            .logo{
+                padding: 20px 0;
+                text-align: left;
+                margin-left: 57px;
+                .special-text{
+                    padding: 10px 20px;
+                    font-size: 28px;
+                }
+            }
+        }
+        .hero{
+            border-top: 0;
+            height: 550px;
+            .content{
+                font-size: 4rem;
+                width: 273px;
+                text-align: left;
+                left: 11%;
+                transform: translate(-77px, -50%);
+                line-height: 93.74px;
+            }
+        }
+        
+        .main-content{
+            margin: 56px 77px;
+            .search-wrapper{
+                label{
+                    font-size: 24px;
+                }
+                .search-input{
+                    height: 54px;
+                    font-size: 20px;
+                }
+            }
+            .movies-wrapper{
+                margin-top: 48px;
+                .single-category{
+                    .title{
+                        margin-bottom: 26px;
+                        font-size: 24px;
+                    }
+                    .movies{
+                        .single-movie{
+                            .movie-img{
+                                width: 300px;
+                                height: 300px;
+                            }
+                            .title{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
